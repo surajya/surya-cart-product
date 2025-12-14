@@ -1,19 +1,19 @@
 package spring.Modal;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Product {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int pId;
 	private String pName;
-	
+
 	@Column(length = 3000)
 	private String pDiscription;
 	private long pPrice;
@@ -54,9 +54,8 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [pId=" + pId + ", pName=" + pName + ", pDiscription=" + pDiscription + ", pPrice=" + pPrice
-				+ "]";
+		return "Product [pId=" + pId + ", pName=" + pName + ", pDiscription="
+				+ pDiscription + ", pPrice=" + pPrice + "]";
 	}
-	
-	
+
 }
